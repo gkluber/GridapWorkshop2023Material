@@ -34,7 +34,7 @@
 #
 # On top of it's mesh-generation functionalities, Gridap provides a convenient ways to read and write discrete models from and to files. We import the model for this problem from `GMSH` as follows:
 
-using Gridap, GridapGmsh
+using Gridap, GridapGmsh, Gridap.Io
 using DrWatson
 
 msh_file_gmsh = projectdir("meshes/elasticity.msh")
@@ -117,9 +117,8 @@ V0    = TestFESpace(model,reffe;
 #
 #hint= **Hint:** The functions must be vector-valued with the format `VectorValue(val_x1,...,val_xD)`.
 
-#hint=# Solution for exercise 4
-#sol=g1(x) = VectorValue(0.005,0.0,0.0)
-#sol=g2(x) = VectorValue(0.0,0.0,0.0)
+g1(x) = VectorValue(0.005,0.0,0.0)
+g2(x) = VectorValue(0.0,0.0,0.0)
 
 # ### Exercise 5
 #
