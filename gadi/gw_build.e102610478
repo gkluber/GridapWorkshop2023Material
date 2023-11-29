@@ -1,0 +1,47 @@
+┌ Warning: detected extension '.01_1' does not correspond to dataset type.
+│ Appending '.vtu' to filename.
+└ @ WriteVTK /scratch/vp91/gk0311/.julia/packages/WriteVTK/40McB/src/WriteVTK.jl:137
+┌ Warning: detected extension '.02_1' does not correspond to dataset type.
+│ Appending '.vtu' to filename.
+└ @ WriteVTK /scratch/vp91/gk0311/.julia/packages/WriteVTK/40McB/src/WriteVTK.jl:137
+┌ Warning: detected extension '.01_1' does not correspond to dataset type.
+│ Appending '.vtu' to filename.
+└ @ WriteVTK /scratch/vp91/gk0311/.julia/packages/WriteVTK/40McB/src/WriteVTK.jl:137
+┌ Warning: detected extension '.02_1' does not correspond to dataset type.
+│ Appending '.vtu' to filename.
+└ @ WriteVTK /scratch/vp91/gk0311/.julia/packages/WriteVTK/40McB/src/WriteVTK.jl:137
+
+------------------------------------------------------------------------
+Job 102610478 has exceeded memory allocation on node gadi-cpu-clx-0458.gadi.nci.org.au
+Process "bash", pid 1780105, rss 2887680, vmem 23859200
+Process "102610478.gadi-", pid 1780172, rss 2473984, vmem 10313728
+Process "julia", pid 1780209, rss 184795136, vmem 804089856
+Process "julia", pid 1784407, rss 4067315712, vmem 5223133184
+------------------------------------------------------------------------
+For more information visit https://opus.nci.org.au/x/SwGRAQ
+------------------------------------------------------------------------
+[ Info: PackageCompiler: Executing /scratch/vp91/gk0311/GridapWorkshop2023Material/gadi/compile/warmup.jl => /jobfs/102610478.gadi-pbs/jl_packagecompiler_T4QoAp/jl_5H7N2P
+[ Info: PackageCompiler: Done
+- PackageCompiler: compiling incremental system image
+ERROR: LoadError: failed process: Process(`/scratch/vp91/gridap-workshop/julia/julia-1.8.5/bin/julia --color=auto --startup-file=no --cpu-target=native --sysimage=/scratch/vp91/gridap-workshop/julia/julia-1.8.5/lib/julia/sys.so --project=/scratch/vp91/gk0311/GridapWorkshop2023Material/gadi --output-o=/jobfs/102610478.gadi-pbs/jl_qjqtWdGJwh.o /jobfs/102610478.gadi-pbs/jl_2pgbUBYjcH`, ProcessSignaled(9)) [0]
+
+Stacktrace:
+ [1] pipeline_error
+   @ ./process.jl:565 [inlined]
+ [2] run(::Cmd; wait::Bool)
+   @ Base ./process.jl:480
+ [3] run
+   @ ./process.jl:477 [inlined]
+ [4] #19
+   @ /scratch/vp91/gk0311/.julia/packages/PackageCompiler/Na90o/ext/TerminalSpinners.jl:157 [inlined]
+ [5] spin(f::PackageCompiler.var"#19#21"{Cmd}, s::PackageCompiler.TerminalSpinners.Spinner{IOStream})
+   @ PackageCompiler.TerminalSpinners /scratch/vp91/gk0311/.julia/packages/PackageCompiler/Na90o/ext/TerminalSpinners.jl:164
+ [6] macro expansion
+   @ /scratch/vp91/gk0311/.julia/packages/PackageCompiler/Na90o/ext/TerminalSpinners.jl:157 [inlined]
+ [7] create_sysimg_object_file(object_file::String, packages::Vector{String}, packages_sysimg::Set{Base.PkgId}; project::String, base_sysimage::String, precompile_execution_file::Vector{String}, precompile_statements_file::Vector{String}, cpu_target::String, script::Nothing, sysimage_build_args::Cmd, extra_precompiles::String, incremental::Bool)
+   @ PackageCompiler /scratch/vp91/gk0311/.julia/packages/PackageCompiler/Na90o/src/PackageCompiler.jl:135
+ [8] create_sysimage(packages::Vector{Symbol}; sysimage_path::String, project::String, precompile_execution_file::String, precompile_statements_file::Vector{String}, incremental::Bool, filter_stdlibs::Bool, cpu_target::String, script::Nothing, sysimage_build_args::Cmd, include_transitive_dependencies::Bool, base_sysimage::Nothing, julia_init_c_file::Nothing, julia_init_h_file::Nothing, version::Nothing, soname::Nothing, compat_level::String, extra_precompiles::String)
+   @ PackageCompiler /scratch/vp91/gk0311/.julia/packages/PackageCompiler/Na90o/src/PackageCompiler.jl:599
+ [9] top-level scope
+   @ /scratch/vp91/gk0311/GridapWorkshop2023Material/gadi/compile/compile.jl:3
+in expression starting at /scratch/vp91/gk0311/GridapWorkshop2023Material/gadi/compile/compile.jl:3
